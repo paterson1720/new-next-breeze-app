@@ -88,29 +88,3 @@ model VerificationToken {
 
   @@unique([identifier, token])
 }
-
-
-model Banner {
-  id            String   @id @default(cuid())
-  title         String
-  description   String
-  isActive      Boolean  @default(false)
-  link          String?
-  linkText      String?
-  updatedBy     String
-  createdBy     String
-
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
-}
-
-
-model Post {
-  id            String   @id @default(cuid())
-  title         String
-  content       String
-  isPublished   Boolean  @default(false)
-
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
-}

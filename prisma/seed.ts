@@ -24,7 +24,7 @@ async function seedData() {
     create: { name: "user" },
   });
 
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 3; i++) {
     const rolesToCreate = [{ role: { connect: { name: "user" } } }];
     if (i === 0) rolesToCreate.push({ role: { connect: { name: "admin" } } });
 
