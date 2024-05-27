@@ -1,0 +1,17 @@
+export enum StripeEvent {
+  CheckoutSessionCompleted = "checkout.session.completed",
+  ChargeSucceeded = "charge.succeeded",
+  CustomerCreated = "customer.created",
+  CustomerSubscriptionCreated = "customer.subscription.created",
+  CustomerSubscriptionUpdated = "customer.subscription.updated",
+  CustomerSubscriptionDeleted = "customer.subscription.deleted",
+  InvoicePaid = "invoice.paid",
+  InvoicePaymentFailed = "invoice.payment_failed",
+  InvoicePaymentSucceeded = "invoice.payment_succeeded",
+  InvoiceFinalized = "invoice.finalized",
+  CustomerSubscriptionTrialWillEnd = "customer.subscription.trial_will_end",
+  PaymentIntentCreated = "payment_intent.created",
+  PaymentIntentSucceeded = "payment_intent.succeeded",
+  PaymentIntentPaymentFailed = "payment_intent.payment_failed",
+  PaymentMethodAttached = "payment_method.attached",
+}

@@ -1,0 +1,4 @@
+-- AlterTable
+ALTER TABLE "Banner" ALTER COLUMN "isActive" SET DEFAULT false,
+ALTER COLUMN "link" DROP NOT NULL,
+ALTER COLUMN "linkText" DROP NOT NULL;
