@@ -10,11 +10,7 @@ import Flex from "@/components/ui/flex";
 import FlexCol from "@/components/ui/flex-col";
 import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
 
-import SigninMethodSeparator from "./signin-method-separator";
 import SignInWithGoogle from "./signin-with-google-button";
-import SignInWithFacebook from "./signin-with-facebook-button";
-import SignInWithGithub from "./signin-with-github-button";
-import { SigninWithEmailForm } from "./signin-with-email-form";
 import { errorCodesMap } from "./signin-error-codes-map";
 import OverlaySpinner from "@/components/ui/overlay-spinner";
 
@@ -77,12 +73,8 @@ export default function SignInView({ session }: Props) {
         <p className="text-gray-500 text-center">Choose an option to signin</p>
       </FlexCol>
       <FlexCol className="w-full max-w-sm">
-        <SigninWithEmailForm visible={Boolean(providers["magic-link-provider"])} />
-        <SigninMethodSeparator visible={Boolean(providers["magic-link-provider"])} />
         <FlexCol className="gap-2">
           <SignInWithGoogle visible={Boolean(providers.google)} />
-          <SignInWithFacebook visible={Boolean(providers.facebook)} />
-          <SignInWithGithub visible={Boolean(providers.github)} />
         </FlexCol>
       </FlexCol>
     </FlexCol>

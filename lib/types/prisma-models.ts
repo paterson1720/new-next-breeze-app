@@ -9,16 +9,3 @@ export type UserGetPayload = Prisma.UserGetPayload<{
     };
   };
 }>;
-
-export type BannerGetPayload = Prisma.BannerGetPayload<{}>;
-
-export type AnnouncementGetPayload = Prisma.AnnouncementGetPayload<{
-  include: {
-    updatedByUser: {
-      select: {
-        name: boolean;
-        image: boolean;
-      };
-    };
-  };
-}>;

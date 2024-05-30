@@ -6,7 +6,6 @@ import { Role } from "@/lib/types/enums";
 
 import appConfig from "@/app/app.config";
 import { auth, signIn, signOut } from "@/lib/auth";
-import { SigninWithEmailFormType } from "@/lib/validation-schemas";
 import { userHasRoles } from "@/lib/auth/helpers";
 
 type SignInButtonProps = {
@@ -22,25 +21,6 @@ export async function isUserLoggedIn() {
   const session = await auth();
   const userIsLoggedIn = Boolean(session);
   return userIsLoggedIn;
-}
-
-export async function signinWithEmail(data: SigninWithEmailFormType & { redirectUrl?: string }) {
-  return signIn("magic-link-provider", {
-    email: data.email,
-    redirectTo: data.redirectUrl || appConfig.pages.dashboard,
-  });
-}
-
-export async function signinWithGithub({ redirectUrl }: SignInButtonProps = {}) {
-  return signIn("github", {
-    redirectTo: redirectUrl || appConfig.pages.dashboard,
-  });
-}
-
-export async function signinWithFacebook({ redirectUrl }: SignInButtonProps = {}) {
-  return signIn("facebook", {
-    redirectTo: redirectUrl || appConfig.pages.dashboard,
-  });
 }
 
 export async function signinWithGoogle({ redirectUrl }: SignInButtonProps = {}) {
