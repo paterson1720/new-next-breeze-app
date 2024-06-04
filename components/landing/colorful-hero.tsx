@@ -30,7 +30,7 @@ export default function ColorfulHero() {
         <div className="flex flex-col gap-2 min-[400px]:flex-row">
           <a
             className="inline-flex h-10 items-center justify-center rounded-md bg-emerald-600 px-8 text-sm font-medium text-gray-50 shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 "
-            href="https://remixbreeze.com/docs"
+            href="https://github.com/paterson1720/new-next-breeze-app?tab=readme-ov-file#quick-start"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -53,7 +53,7 @@ export default function ColorfulHero() {
               </li>
             </a>
             <a
-              href="https://github.com/paterson1720/new-nextjs-breeze-app"
+              href="https://github.com/paterson1720/new-next-breeze-app"
               target="_blank"
               rel="noopener noreferrer"
             >
