@@ -7,6 +7,7 @@ import MobileMenu from "./mobile-menu";
 import { Session } from "next-auth";
 import { useRouter } from "next/navigation";
 import appConfig from "@/app/app.config";
+import { ThemeModeToggle } from "@/components/theme-mode-toggle";
 
 interface Props {
   session?: Session | null;
@@ -72,7 +73,8 @@ export default function CenteredResponsiveNavbar({ session }: Props) {
           </nav>
 
           {/* Desktop nav cta link */}
-          <ul className="flex-1 flex justify-end items-center">
+          <ul className="flex-1 flex justify-end items-center gap-4">
+            <ThemeModeToggle />
             <li>
               <Link
                 className="font-medium text-sm p-2 px-4 rounded-full bg-indigo-600 text-white hover:bg-indigo-700 whitespace-nowrap transition duration-150 ease-in-out"

@@ -9,7 +9,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
   return (
     <AosInitializer>
       <Navbar session={session} />
-      <main className="grow bg-slate-950 text-gray-100 ">{children}</main>
+      <main className="grow dark:bg-slate-950 dark:text-gray-100 ">{children}</main>
       <Footer />
     </AosInitializer>
   );
